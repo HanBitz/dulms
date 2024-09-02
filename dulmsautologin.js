@@ -7,7 +7,7 @@
 // @require     https://cdn.jsdelivr.net/npm/sweetalert2@11
 // @icon        https://www.google.com/s2/favicons?sz=64&domain=https://lms.daegu.ac.kr
 // @grant       none
-// @version     1.0
+// @version     1.01
 // @author      H
 // @description 2024. 9. 2. 오전 10:02:08
 // @grant       GM.getValue
@@ -331,7 +331,7 @@ if (window.location.href.match('https://sso.daegu.ac.kr/dgusso/ext/lms/login_pro
 } else if(window.location.href.match('https://lms.daegu.ac.kr/ilos/main/main_form.acl')) {
   window.addEventListener('load', () => setTimeout(procedureMainpage, 50));
 } else {
-  await Swal.fire({
+  Swal.fire({
     icon: "warning",
     title: "LMS 자동 로그인",
     html: "<div>지원하지 않는 사이트입니다..</div>",
